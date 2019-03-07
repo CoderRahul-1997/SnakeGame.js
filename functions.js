@@ -4,8 +4,8 @@ function developerMethod()
 	console.log('----------------------------------------------');
 	console.log('|                                            |');
 	console.log('|           Developer : Rahul Gupta.         |');
-	console.log('|           If you are a true Coder,         |');
-	console.log('|           Never copy others code.          |');
+	console.log('|        A simple JavaScript Snake game      |');
+	console.log('|             using html5 canvas.            |');
 	console.log('|                                            |');
 	console.log('----------------------------------------------');
 }
@@ -18,15 +18,11 @@ function transitionMethod()
 	var clsName = "reduced-intro";
 	var arr = introClass.className.split(" ");
 	if (arr.indexOf(clsName) == -1) 
-	{
 		introClass.className += " " + clsName;
-	}
 	clsName = "reduced-head";
 	arr = introClass.className.split(" ");
 	if (arr.indexOf(clsName) == -1) 
-	{
 		introHead.className += " " + clsName;
-	}
 
 	var btnStart=document.getElementById('btn-start');
 	btnStart.style.display='none';
@@ -64,8 +60,6 @@ function initializeWindow(){
 }
 
 window.addEventListener('resize',function(event){
-
-	
 	if(window.innerWidth<=380)
 	{
 		gameBoard.width=window.innerWidth*0.8;
@@ -114,8 +108,6 @@ function createHead(x,y)
 	c.arc(x,y,3.5,0,2*Math.PI,false);
 	c.fillStyle='white';
 	c.fill();
-
-
 }
 function createTail(x,y)
 {
@@ -246,7 +238,6 @@ function animate()
 		c.clearRect(0,0,gameBoard.width,gameBoard.height);
 		gameLogicMethod();
 	}
-
 }
 
 
@@ -260,15 +251,3 @@ window.addEventListener('keypress',function(event){
 	else if(event.key==='d')
 		this.direction='right';	
 });
-
-
-/*
-  -----------------------------------------------
-  |												|
-  |												|		
-  | Got Retarded with this game....why the hell	|
-  |     snake is not getting tangled .... 		|	
-  |												|	
-  |												|
-  -----------------------------------------------
-  */
