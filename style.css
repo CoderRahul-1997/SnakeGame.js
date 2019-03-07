@@ -1,0 +1,290 @@
+html,body
+{
+	margin: 0 auto;
+	padding:0;
+	max-width: 100%;
+	height: 100%;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.landing-page
+{
+	position: relative;
+	height: 100%;
+
+	
+	/*overflow: hidden;*/
+	background-color: #02021d;
+	position: relative;
+	overflow: hidden;
+}
+#landingPage
+{
+	background-color: #02021d;
+}
+.background-class
+{
+	background-image: url('images/rockpaperscissorback.jpg');
+	background-size: cover;
+	background-position: center 70%;
+	background-attachment: fixed;
+}
+.landing-page .intro-class
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	width: 100%;
+}
+.landing-page .reduced-intro
+{
+	position: relative;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .3s linear;
+}
+.landing-page .intro-class .intro-head
+{
+	color:white;
+	font-size: 100px;
+	font-weight: bolder;
+	text-shadow: 0 0 15px #111;
+	border:5px solid #fff;
+	display: inline-block;
+	padding: 20px 40px;
+	max-width: 75%;
+}
+.landing-page .reduced-intro .reduced-head
+{
+	border:5px solid #fbc714;
+	color: #a11c1ccc;
+	font-size: 45px;
+	letter-spacing: 1.8px;
+	transition: .3s linear;
+	text-shadow:  3.5px 1.3px .1px #ffdc45;
+	/*animation-name: textGlow;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-delay: 0s;*/
+}
+.landing-page .intro-class .btn-start
+{
+	width: 190px;
+	height: 60px;
+	margin-top: 25px;
+	font-size: 18px;
+	font-family: segoe script;
+	font-weight: bolder;
+	background-color: #8f1c1c;
+	color: white;
+	border:none;
+	box-shadow: 0px 0px 5px 1px #333;
+	border-radius: 8px;
+	cursor: pointer;
+	
+}
+.landing-page .intro-class .btn-start:hover
+{
+	animation-name: btn-dance;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    box-shadow: 0px 0px 10px 1px #111;
+}
+.landing-page .intro-class .description
+{
+	width: 450px;
+	color: white;
+	font-family: segoe script;
+	font-size: 16px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 25px;
+	font-weight: bolder;
+}
+
+
+.landing-page .game-wrapper
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+}
+.landing-page .game-wrapper .game-board
+{
+	position: absolute;
+	top: 120px;
+	
+	left: 50%;
+	transform: translateX(-50%);
+	border:5px solid #ff2828;
+	color:white;
+
+	z-index: 5;
+}
+.landing-page .game-wrapper .score-board
+{
+	font-size: 40px;
+	font-family: Britannic Bold;
+	position: relative;
+	top: 50px;
+	letter-spacing: 2px;
+	color: #00f350e6;
+	text-shadow: 2.3px 1px 1px #ff53eb;
+}
+
+
+
+
+.landing-page .result-container
+{
+	position: relative;
+	margin-bottom: 0;
+	color: #faff26;
+	text-align: center;
+	bottom: -63%;
+	font-size: 25px;
+	font-family: Britannic Bold;
+	letter-spacing: 1.5px;
+	text-shadow: 3px 1px 1px #8959e6e6;
+}
+
+
+@keyframes btn-dance
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+        transform-origin: left;
+    }
+    20%
+    {
+        transform: rotateZ(9deg);
+        transform-origin: right;
+    }
+    40%
+    {
+        transform: rotateZ(-9deg);
+        transform-origin: left;
+    }
+    60%
+    {
+        transform: rotateZ(7deg);
+        transform-origin: right;
+    }
+    70%
+    {
+        transform: rotateZ(-7deg);
+        transform-origin: left;
+    }
+    80%
+    {
+        transform: rotateZ(4deg);
+        transform-origin: right;
+    }
+    90%
+    {
+        transform: rotateZ(-4deg);
+        transform-origin: left;
+    }
+    100%
+    {
+        transform: rotateZ(0deg);
+        transform-origin: right;
+
+    }
+
+}
+footer
+{
+	position: fixed;
+	bottom: 5px;
+	right: 5%;
+	z-index: 5;
+	color: white;
+	text-decoration: underline;
+	font-family: arial;
+	font-size: 14px;
+}
+#btn-restart
+{
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	border:none;
+	background-color: red;
+	margin-top: 10px;
+	color: white;
+	border-radius: 5px;
+	display: none;
+	cursor: pointer;
+}
+#gameWrapper, #resultContainer
+{
+	display: none;
+}
+@media(max-width: 390px)
+{
+	.landing-page .reduced-intro .reduced-head
+	{
+		font-size: 35px;
+		padding: 15px;
+	}
+	.landing-page .game-wrapper .score-board
+	{
+		font-size: 30px;
+	}
+	.landing-page .result-container h3
+	{
+		font-size: 25px;
+	}
+}
+@media(max-height:615px )
+{
+	.landing-page .reduced-intro .reduced-head
+	{
+		font-size: 35px;
+		padding: 15px;
+	}
+	.landing-page .game-wrapper .score-board
+	{
+		font-size: 30px;
+		position: relative;
+		top: 20px;
+	}
+	.landing-page .game-wrapper .game-board
+	{
+		position: absolute;
+		top: 80px;
+	}
+	.landing-page .result-container h3
+	{
+		font-size: 25px;
+	}
+}
+@media(max-width: 730px)
+{
+	.landing-page .intro-class .intro-head
+	{
+		font-size: 40px;
+	}
+	.landing-page .intro-class .description
+	{
+		width: 80%;
+	}
+}
+@media(max-width: 325px)
+{
+	.landing-page .intro-class .intro-head
+	{
+		font-size: 35px;
+	}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake Game</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+	<body >
+		<div class="landing-page background-class" id='landingPage'>
+			<div class="intro-class" id='intro-class'>
+				<h1 class='intro-head' id="intro-head">Snake Game</h1><br>
+				<button class='btn-start' onclick='developerMethod();transitionMethod();gameMethod()' id='btn-start'>Start Playing</button>
+				<p class='description' id='description'>
+					Hello guys, I am Rahul, a Computer Science Student. I have build this game.Hope you enjoy playing it.<br>
+					Thank You.
+				</p>
+
+				<div class="game-wrapper" id='gameWrapper'>
+					<canvas class="game-board" id="gameBoard">
+						
+					</canvas>
+
+					<div class="score-board" id="scoreBoard">Score : </div>
+
+				</div>
+
+			</div>
+			<div class="result-container" id='resultContainer'>
+				<h3 id='result'></h3>
+				<button id="btn-restart" onclick="gameMethod()">Restart</button>
+			</div>
+
+		</div>
+		<footer><i>Developer : Rahul</i></footer>
+		<script type="text/javascript" src="functions.js"></script>
+	</body>
+</html>
